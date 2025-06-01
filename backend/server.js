@@ -25,7 +25,7 @@ mongoose.connect(process.env.MONGO_URI, {
 
 // Middleware
 app.use(cors({
-  origin: 'http://localhost:3000', // React frontend port
+  origin: 'http://localhost:3000', 'https://dotdone-five.vercel.app'// React frontend port
   credentials: true
 }));
 app.use(express.json());
