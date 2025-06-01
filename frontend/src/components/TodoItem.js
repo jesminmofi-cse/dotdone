@@ -5,7 +5,7 @@ import './TodoItem.css';
 const TodoItem = ({ todo, fetchTodos }) => {
   const toggleComplete = async () => {
     try {
-      await axios.put(`http://localhost:5000/api/todos/${todo._id}`, {
+      await axios.put(`https://dotdone.onrender.com/api/todos/${todo._id}`, {
         completed: !todo.completed,
         task: todo.task,
       });
@@ -17,7 +17,7 @@ const TodoItem = ({ todo, fetchTodos }) => {
 
   const deleteTodo = async () => {
     try {
-      await axios.delete(`http://localhost:5000/api/todos/${todo._id}`);
+      await axios.delete(`https://dotdone.onrender.com/api/todos/${todo._id}`);
       fetchTodos();
     } catch (error) {
       console.error("Error deleting todo:", error);
