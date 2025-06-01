@@ -9,7 +9,7 @@ const TodoPage = ({ user }) => {
 
   const fetchTodos = useCallback(async () => {
     try {
-      const res = await axios.get(`http://localhost:5000/api/todos?userId=${user._id}`);
+      const res = await axios.get(`https://dotdone.onrender.com/api/todos?userId=${user._id}`);
       setTodos(res.data);
     } catch (error) {
       console.error("Error fetching todos:", error);
@@ -19,7 +19,7 @@ const TodoPage = ({ user }) => {
   const addTodo = async () => {
     if (!task.trim()) return;
     try {
-      await axios.post('http://localhost:5000/api/todos', { task, userId: user._id });
+      await axios.post('https://dotdone.onrender.com/api/todos', { task, userId: user._id });
       setTask('');
       fetchTodos();
     } catch (error) {
