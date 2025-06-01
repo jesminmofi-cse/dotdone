@@ -9,7 +9,7 @@ const LoginPage=({ setUser})=>{
     
     const handleLogin= async ()=>{
         try{
-            const res= await axios.post('http://localhost:5000/api/users/login',{email,password});
+            const res= await axios.post('https://dotdone.onrender.com/api/users/login',{email,password});
             setUser(res.data);
             navigate('/todos');
         }catch(err){
