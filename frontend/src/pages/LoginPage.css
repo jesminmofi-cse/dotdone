@@ -1,0 +1,57 @@
+/* LoginPage.css */
+.form {
+  width: 300px;
+  margin: 100px auto;
+  padding: 2rem;
+  background: linear-gradient(135deg, #4ea8de, #4c6793);
+  border-radius: 20px;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
+  color: white;
+  text-align: center;
+}
+
+.form h2 {
+  margin-bottom: 1.5rem;
+  font-size: 2rem;
+  font-weight: bold;
+}
+
+.form input {
+  display: block;
+  width: 90%;
+  margin: 0.8rem auto;
+  padding: 0.7rem;
+  border-radius: 10px;
+  border: none;
+  outline: none;
+  font-size: 1rem;
+}
+
+.form button {
+  margin-top: 1rem;
+  padding: 0.7rem 1.5rem;
+  border: none;
+  border-radius: 10px;
+  background-color: #fff;
+  color: #333;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+.form button:hover {
+  background-color: #ddd;
+}
+.link {
+  margin-top: 1rem;
+  display: block;
+  color: #555;
+  cursor: pointer;
+  font-size: 0.9rem;
+  text-decoration: underline;
+  text-align: center;
+}
+
+.link:hover {
+  color: #2980b9;
+}
