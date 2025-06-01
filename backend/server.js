@@ -22,12 +22,25 @@ mongoose.connect(process.env.MONGO_URI, {
   console.error('🔴 MongoDB Connection Failed:', err.message);
   process.exit(1);
 });
+// Allowed origins for CORS
+const allowedOrigins = [
+  'http://localhost:3000',
+  'https://dotdone-five.vercel.app'
+];
 
 // Middleware
 app.use(cors({
-  origin: 'http://localhost:3000', 'https://dotdone-five.vercel.app'// React frontend port
+  origin: function (origin, callback) {
+    // Allow requests with no origin like Postman or mobile apps
+    if (!origin || allowedOrigins.includes(origin)) {
+      callback(null, true);
+    } else {
+      callback(new Error('Not allowed by CORS 😢'));
+    }
+  },
   credentials: true
 }));
+
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 
