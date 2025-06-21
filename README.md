@@ -1,4 +1,4 @@
-Dot Done is a simple to-do list app with adding, storing, and deleting the tasks.
+##Dot Done## is a simple to-do list app with adding, storing, and deleting the tasks.
 This app helps with us in the productivity and have an organised routine.
 Sleek. Snappy. Symbolic. That little “dot” isn’t just a design choice — it’s a ritual of closure. Every time you check a task, it’s like whispering to chaos: Not today.
 ------------
@@ -27,5 +27,7 @@ Sleek. Snappy. Symbolic. That little “dot” isn’t just a design choice — 
 ----------
 ## Tech Stack 
 -Frontend: React,css
+
 -Backend: nodejs,expressjs
+
 -Database: MogoDB
